@@ -11,6 +11,6 @@ Gem::Specification.new do |s|
   s.files = ['rack-datamapper-session.gemspec', 'README', 'LICENSE', 'lib/rack-datamapper-session.rb']
   s.summary ='Datamapper session for any Rack based application'
 
-  s.add_dependency 'rack', '>= 1.0'
+  s.add_dependency 'rack', '>= 1.3'
   s.add_dependency 'dm-core', '>= 0.9.10'
 end

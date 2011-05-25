@@ -34,6 +34,10 @@ module Rack
         data.clear
       end
       
+      def each &block
+        data.each &block
+      end
+      
       def data
         self.data_object ||= {}
       end
@@ -71,7 +75,7 @@ module Rack
           session = DataMapperSession.new(:sid => sid)
         end
         
-        session.data = new_session.data
+        session.data = new_session
         raise 'Unable to update session' unless session.save
 
         return sid
